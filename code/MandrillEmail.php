@@ -846,7 +846,7 @@ class MandrillEmail extends Email
                 $html);
         }
         return HTTP::urlRewriter($html,
-                function ($url) {
+    public function ($url) {
                 //no need to rewrite, if uri has a protocol (determined here by existence of reserved URI character ":")
                 if (preg_match('/^\w+:/', $url)) {
                     return $url;
